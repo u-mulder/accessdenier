@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Accessdenier",
+    "version": "0.5",
+
+    "description": "Denies access to sites",
+
+    "icons": {
+        "48": "icons/extension_icon.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["deny.js"]
+        }
+    ],
+
+    "options_ui": {
+        "page": "options.html"
+    },
+
+    "permissions": ["storage"]
+}
